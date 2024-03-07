@@ -1,0 +1,143 @@
+:root {
+    --clr-primary-100: hsl(0, 0%, 100%);
+    --clr-secondary-500: hsl(292, 42%, 14%);
+    
+    --clr-neutral-100: hsl(275, 100%, 97%);
+    --clr-neutral-200: hsl(292, 16%, 49%);
+    --clr-neutral-600:hsl(304, 62%, 56%);
+
+    --ff-base: 'Work Sans', sans-serif;
+
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+
+    --fs-base: 16px;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+ body {
+    background-color: var(--clr-neutral-100);
+    display: grid;
+    place-content: center;
+    background-image: url('assets/images/background-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100vw;
+    font-size: var();
+    font-family: var(--ff-base);
+    font-weight: var(--fw-semi-bold);
+    font-size: var(--fs-base);
+  }
+
+  .card {
+    background-color: var(--clr-primary-100);
+    border-radius: 1rem;
+    padding: 40px;
+    display: grid;
+    place-content: center;
+    align-items: center;
+    max-width: 600px;
+    height: auto;
+  }
+
+  .title {
+    display: flex;
+    gap: 20px;
+    font-weight: var(--fw-bold);
+    font-size: 1.5rem;
+    color: var(--clr-secondary-500);
+  }
+
+  .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .question h2 {
+    color: var(--clr-secondary-500);
+    font-size: 1rem;
+    font-weight: var(--fw-semi-bold);
+  }
+
+  .question h2:hover {
+    color: var(--clr-neutral-600);
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+
+  .hide-icon {
+    display: none;
+  }
+
+  .answer p {
+    color: var(--clr-neutral-200);
+    font-weight: var(--fw-regular);
+    padding-top: 10px;
+  }
+
+  .answer {
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .show-answer {
+    display: block;
+    max-height: unset;
+    overflow: visible;
+  }
+
+  hr {
+    color: var(--clr-neutral-100);
+    margin: 20px 0;
+  }
+  
